@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro Max Bonus $750</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0e0e0e;
+            color: #fff;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* Centered container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://example.com/iphone15promax.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Content box */
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 40px 50px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Title with animation */
+        h1 {
+            font-size: 40px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        /* Description text */
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #f1f1f1;
+        }
+
+        /* Email input */
+        input[type="email"] {
+            padding: 12px 20px;
+            width: 300px;
+            font-size: 16px;
+            margin-right: 15px;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            border-color: #ff9900;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            padding: 12px 30px;
+            font-size: 20px;
+            background-color: #ffcc00;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff9900;
+        }
+
+        /* Countdown timer */
+        .countdown {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Social proof */
+        .social-proof {
+            font-size: 16px;
+            color: #fff;
+            margin-top: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Mobile menu */
+        .three-line-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu a {
+            color: #fff;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Popup notification */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        .popup button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Claim Your $750 Bonus Towards iPhone 15 Pro Max!</h1>
+            <p>Get $750 towards your new iPhone 15 Pro Max with this limited-time exclusive offer. Hurry, this deal won't last long!</p>
+
+            <div class="email-form">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button class="submit-btn" onclick="submitForm()">Submit & Start Applying!</button>
+            </div>
+
+            <div class="countdown">
+                <p>Offer Expires In: <span id="timer"></span></p>
+            </div>
+
+            <div class="social-proof">
+                <p>John from NY just claimed this offer!</p>
+            </div>
+
+            <div class="three-line-btn" onclick="toggleMenu()">☰</div>
+            <div class="menu">
+                <a href="https://go4affm.com/c/?p=40201&o=18652&s1=1234">Home</a>
+                <a href="https://go4affm.com/c/?p=40201&o=18652&s1=1234">About</a>
+                <a href="https://go4affm.com/c/?p=40201&o=18652&s1=1234">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <p>7238 people have already claimed this offer! Don't miss your chance!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateTimer() {
+            const deadline = new Date().getTime() + 1000 * 60 * 60; // 1 hour from now
+            setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = deadline - now;
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById("timer").innerText = hours + ":" + minutes + ":" + seconds;
+            }, 1000);
+        }
+
+        // Toggle menu for mobile
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Submit Form
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                window.location.href = 'https://go4affm.com/c/?p=40201&o=18652&s1=1234';
+            }
+        }
+
+        // Show popup
+        setTimeout(function() {
+            document.getElementById('popup').classList.add('show');
+        }, 5000);
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('popup').classList.remove('show');
+        }
+
+        // Start countdown
+        updateTimer();
+    </script>
+
+</body>
+</html>
